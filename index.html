@@ -30,14 +30,14 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background:#525252;
+      background:#252531;
       backdrop-filter: blur(5px);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
     }
 
     .header.scrolled {
-       background:#525252;
+       background:#252531;
     }
 
     .nav-container {
@@ -64,7 +64,7 @@
     .logo-text {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #ffffff;
+      color: #fff;
       letter-spacing: 1px;
     }
 
@@ -78,7 +78,7 @@
     }
 
     .nav-link {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 500;
@@ -164,9 +164,9 @@
       justify-content: center;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       background-image: url('images/hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+       background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
       overflow: hidden;
     }
 
@@ -1793,6 +1793,12 @@ input, textarea {
   
  
 }
+@media screen and (max-width: 450px) {
+     .hero-container {
+        /* Use a smaller, optimized image for mobile to save bandwidth */
+        background-image: url('images/mobile-hero-image.png'); /* Replace with a smaller image path */
+    }
+}
 
 @media only screen and (max-width : 720px){
     
@@ -1997,6 +2003,16 @@ input, textarea {
         position: relative;
         transform: translateY(30px);
       }
+.site-header-with-image {
+    /* Set the background image */
+    background-image: url('images/hero-image1.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    height: 60vh; /* Set header height relative to the viewport height */
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Add shadow for readability */
+}
 
       .highlights-image-content.visible {
         transform: translateY(0);
@@ -2161,6 +2177,19 @@ input, textarea {
         font-size: 1.05rem;
       }
     }
+
+
+@media (max-width: 480px) 
+ {
+.highlights-list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 100px;
+}
+
+ }
+
  @media (max-width: 480px) 
  {
       .hero-section, .hero-background
